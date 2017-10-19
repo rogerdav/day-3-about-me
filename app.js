@@ -119,3 +119,27 @@ while (userguess !== 7 && guesscounter < maxguesses) {
   }
 }
 console.log('guess counter', guesscounter);
+
+// question 7 starts here
+var flag1 = false;
+var citieslived = ['seattle','portland','austin','orlando','london'];
+var uguesscity;
+var guessnum = 0;
+
+while (!flag1 && guessnum < 6) {
+  uguesscity = prompt('Guess a city i have lived');
+  guessnum++;
+
+  for (var j = 0; j < citieslived.length; j++) {
+    if (citieslived[j] === uguesscity) {
+      flag1 = true;
+      break;
+    }
+  }
+  if (!flag1) {
+    alert('sorry');
+  }else{
+    alert('Correct');
+    break;
+  }
+}
