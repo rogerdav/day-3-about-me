@@ -124,10 +124,11 @@ console.log('guess counter', guesscounter);
 var flag1 = false;
 var citieslived = ['seattle','portland','austin','orlando','london'];
 var uguesscity;
+var maxcityguess = 6;
 var guessnum = 0;
 
 while (!flag1 && guessnum < 6) {
-  uguesscity = prompt('Guess a city i have lived');
+  uguesscity = prompt('Guess a city i have lived, you have ' + (maxcityguess - guessnum) + ' Turns left');
   guessnum++;
 
   for (var j = 0; j < citieslived.length; j++) {
