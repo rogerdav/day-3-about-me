@@ -5,6 +5,7 @@ alert('Answer all question with a Yes or No. Y/N is also acceptable.');
 
 var answers =  [];
 var correctanswers = ['n','y','n','y','y'];
+var correctanswersl = ['no','yes','no','yes','yes'];
 var anscounter = 0;
 
 
@@ -94,6 +95,12 @@ if (likes === 'y' || likes === 'yes') {
 
 for (var i = 0; i < answers.length; i++) {
   if (answers[i] === correctanswers[i]) {
+    anscounter = anscounter + 1 ;
+  }
+}
+
+for (var k = 0; k < answers.length; k++) {
+  if (answers[k] === correctanswersl[k]) {
     anscounter = anscounter + 1 ;
   }
 }
